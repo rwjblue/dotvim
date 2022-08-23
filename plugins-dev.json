@@ -5,6 +5,9 @@
   "lsp-colors.nvim": {
     "commit": "517fe3a"
   },
+  "lspsaga.nvim": {
+    "commit": "5c1da4e"
+  },
   "nvim-lspconfig": {
     "commit": "a33e232"
   },
@@ -12,7 +15,7 @@
     "commit": "e3353c4"
   },
   "nvim-treesitter": {
-    "commit": "4b536a9"
+    "commit": "4b536a97"
   },
   "nvim-web-devicons": {
     "commit": "2d02a56"

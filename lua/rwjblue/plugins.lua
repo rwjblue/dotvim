@@ -42,6 +42,29 @@ packer.startup({
     use 'kyazdani42/nvim-web-devicons'
     use 'folke/lsp-colors.nvim'
 
+    use({
+      'glepnir/lspsaga.nvim',
+      branch = 'main',
+      config = function()
+        local saga = require('lspsaga')
+
+        saga.init_lsp_saga({
+          move_in_saga = {
+            prev = 'k',
+            ['next'] = 'j',
+          },
+          finder_action_keys = {
+            open = '<cr>',
+            quit = '<C-c>',
+          },
+          code_action_keys = {
+            exec = '<cr>',
+            quit = '<C-c>',
+          },
+        })
+      end,
+    })
+
     use {
       'kyazdani42/nvim-tree.lua',
       config = function()
