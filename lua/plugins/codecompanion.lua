@@ -46,7 +46,19 @@ return {
 
       -- Strategy configurations
       strategies = {
-        chat = { adapter = "anthropic" },
+        chat = {
+          adapter = "anthropic",
+
+          slash_commands = {
+            ["summarize"] = {
+              callback = "rwjblue.codecompanion.slash_commands.summarize",
+              description = "Summarize the URL contents",
+              opts = {
+                adapter = "rwjblue.codecompanion.adapters.kagi"
+              }
+            }
+          },
+        },
         inline = { adapter = "anthropic" },
         agent = { adapter = "anthropic" },
       },
